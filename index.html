@@ -31,6 +31,7 @@
   <body class="lexend-font">
     <!-- header section -->
     <header
+      id="header"
       class="flex flex-col items-center fixed top-0 z-50 w-full backdrop-blur-md bg-[#ffffff99]"
     >
       <nav
@@ -48,11 +49,7 @@
           Bangldesh
         </h2>
         <div class="flex gap-1 sm:gap-2 items-center font-bold pr-3">
-          <img
-            class="w-6 h-6 sm:w-10 sm:h-10"
-            src="./assets/coin.png"
-            alt=""
-          />
+          <img class="w-6 h-6 sm:w-10 sm:h-10" src="./assets/coin.png" alt="" />
           <span id="user-balance">5500</span> BDT
         </div>
       </nav>
@@ -220,7 +217,10 @@
       </section>
 
       <!-- History section -->
-      <section id="history" class="hidden mt-52 w-full min-h-[500px]"></section>
+      <section
+        id="history"
+        class="hidden mt-44 md:mt-52 min-h-[300px] w-full pb-5 pt-3"
+      ></section>
       <dialog id="confirmation_msg" class="modal">
         <div class="modal-box flex flex-col items-center">
           <h3 class="text-2xl font-bold mb-2">Congrates!</h3>
@@ -234,11 +234,10 @@
           </div>
         </div>
       </dialog>
-        
     </main>
-    
-        <!-- footer section -->
-        <footer class="h-32 bg-[#F9F7F3]"></footer>
+
+    <!-- footer section -->
+    <footer id="footer" class="h-32 bg-[#F9F7F3]"></footer>
 
     <script src="./js/script.js"></script>
   </body>

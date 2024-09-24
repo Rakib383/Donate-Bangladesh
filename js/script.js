@@ -24,11 +24,11 @@ navLinkEls.forEach((navlinkEl) => {
 historyBtn.addEventListener("click", () => {
   historySection.classList.remove("hidden");
   donationSection.classList.add("hidden");
+  historySection.scrollIntoView({ block: "end" });
 });
 donationBtn.addEventListener("click", () => {
   donationSection.classList.remove("hidden");
   historySection.classList.add("hidden");
- 
 });
 
 function addMoney(input, balance) {
@@ -48,10 +48,10 @@ function isValidMoney(input) {
     input.value <= 0
   ) {
     input.value = "";
-     alert("invalid donation amount")
-     return false
+    alert("invalid donation amount");
+    return false;
   }
-  return true
+  return true;
 }
 
 donateNoakhaliBtn.addEventListener("click", () => {
@@ -64,40 +64,39 @@ donateNoakhaliBtn.addEventListener("click", () => {
       inpNoakhali.value
     } Taka is Donate for Flood at Noakhali, Bangladesh </h4>
       <p class="text-gray-500 text-sm">Date:${new Date()}</p>`;
-  
+
     historySection.appendChild(div);
     addMoney(inpNoakhali, noakhaliBalance);
   }
- 
 });
 
 donateFeniBtn.addEventListener("click", () => {
-    if (isValidMoney(inpFeni)) {
-        confirmationMsg.showModal();
-        decreaseUserBalance(inpFeni);
-        const div = document.createElement("div");
-        div.className = "border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg ";
-        div.innerHTML = `<h4 class="font-bold mb-2"> ${
-            inpFeni.value
-        } Taka is Donate for Flood Relief in Feni,Bangladesh </h4>
+  if (isValidMoney(inpFeni)) {
+    confirmationMsg.showModal();
+    decreaseUserBalance(inpFeni);
+    const div = document.createElement("div");
+    div.className = "border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg ";
+    div.innerHTML = `<h4 class="font-bold mb-2"> ${
+      inpFeni.value
+    } Taka is Donate for Flood Relief in Feni,Bangladesh </h4>
           <p class="text-gray-500 text-sm">Date:${new Date()}</p>`;
-      
-        historySection.appendChild(div);
-        addMoney(inpFeni, feniBalance);
-      }
+
+    historySection.appendChild(div);
+    addMoney(inpFeni, feniBalance);
+  }
 });
 donateQuotaBtn.addEventListener("click", () => {
-    if (isValidMoney(inpQuota)) {
-        confirmationMsg.showModal();
-        decreaseUserBalance(inpQuota);
-        const div = document.createElement("div");
-        div.className = "border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg ";
-        div.innerHTML = `<h4 class="font-bold mb-2"> ${
-            inpQuota.value
-        } Taka is Donated for Aid for Injured in the Quota Movement </h4>
+  if (isValidMoney(inpQuota)) {
+    confirmationMsg.showModal();
+    decreaseUserBalance(inpQuota);
+    const div = document.createElement("div");
+    div.className = "border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg ";
+    div.innerHTML = `<h4 class="font-bold mb-2"> ${
+      inpQuota.value
+    } Taka is Donated for Aid for Injured in the Quota Movement </h4>
           <p class="text-gray-500 text-sm">Date:${new Date()}</p>`;
-      
-        historySection.appendChild(div);
-        addMoney(inpQuota, quotaBalance);
-      }
+
+    historySection.appendChild(div);
+    addMoney(inpQuota, quotaBalance);
+  }
 });
