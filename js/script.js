@@ -45,10 +45,10 @@ function isValidMoney(input) {
   if (
     isNaN(input.value) ||
     Number(input.value) > Number(userBalance.innerText) ||
-    input.value == false
+    input.value <= 0
   ) {
     input.value = "";
-     alert("not a valid amount")
+     alert("invalid donation amount")
      return false
   }
   return true
@@ -62,7 +62,7 @@ donateNoakhaliBtn.addEventListener("click", () => {
     div.className = "border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg ";
     div.innerHTML = `<h4 class="font-bold mb-2"> ${
       inpNoakhali.value
-    } Taka is Donated for famine-2024 at Feni,Bangladesh </h4>
+    } Taka is Donate for Flood at Noakhali, Bangladesh </h4>
       <p class="text-gray-500 text-sm">Date:${new Date()}</p>`;
   
     historySection.appendChild(div);
