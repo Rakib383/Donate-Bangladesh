@@ -13,6 +13,7 @@ const noakhaliBalance = document.getElementById('noakhali-balance')
 const feniBalance = document.getElementById('noakhali-balance')
 const quotaBalance = document.getElementById('noakhali-balance')
 const userBalance = document.getElementById('user-balance')
+const confirmationMsg = document.getElementById('confirmation_msg')
 
 
 navLinkEls.forEach(navlinkEl => {
@@ -64,9 +65,10 @@ donateNoakhaliBtn.addEventListener('click',()=> {
     div.className="border w-4/5 md:w-3/5 px-4 py-6 mb-5 mx-auto rounded-lg "
     div.innerHTML = `<h4 class="font-bold mb-2"> ${inpNoakhali.value} Taka is Donated for famine-2024 at Feni,Bangladesh </h4>
     <p class="text-gray-500 text-sm">Date:${new Date()}</p>`
-    
+    confirmationMsg.showModal()
     historySection.appendChild(div)
     addMoney(inpNoakhali,noakhaliBalance)
+
     
 
     
