@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+        <!-- tailwind and daisyUI cdn -->
+        <link
+        href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- font cdn -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+        rel="stylesheet"
+      />
+      <!-- font awesome cdn -->
+      <script src="https://kit.fontawesome.com/70e3d08f9c.js" crossorigin="anonymous"></script>
+    <title>Blog || Donate Bangladesh</title>
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav
+    class="flex xl:justify-around justify-between items-center w-full bg-[#F9F7F3] py-5 px-3 sm:px-9 gap-4"
+  >
+    <button
+      class="bg-lime-400 text-sm font-bold w-16 h-10 sm:w-20 sm:text-base rounded-md hover:bg-gray-300"
+    >
+      <a href="./index.html">Home</a>
+    </button>
+    <h2
+      class="flex gap-2 items-center text-sm font-bold w-32 sm:w-auto sm:text-lg"
+    >
+      <img class="w-6 ml-2 sm:w-10" src="../assets/logo.png" alt="" />Donate
+      Bangldesh
+    </h2>
+    <div class="flex gap-2 items-center">
+      <img
+        class="w-8 h-8 sm:w-10 sm:h-10"
+        src="../assets/coin.png"
+        alt=""
+      />
+      <span id="user-balance">5500</span> BDT
+    </div>
+  </nav>
+   <!-- FAQ section -->
+
+   <section class="max-w-sm sm:max-w-xl lg:max-w-4xl xl:max-w-5xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10  mt-12 ">Important FAQ <i class="fa-solid fa-question"></i></h2>
+    <div class="join join-vertical w-full">
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" checked="checked" />
+          <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+          <div class="collapse-content">
+            <p>DOM is a programming interface for web documents.It represents the structure of a web page as a tree of objects and nodes.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How do you select an element from the DOM</div>
+          <div class="collapse-content">
+            <p>We can select an element from the DOM by using browser's DOM API.Some common methods are getElementById(),getElementsByClassName(), querySelector() and querySelectorAll()</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM,and why is it usefull?</div>
+          <div class="collapse-content">
+            <p>Event delegation is an efficient way to manage event handling in the dom by attaching a single event listener to a parent element instead of every child element of parent.It is useful because event delegation simplifies handling of  dynamic added elements,reduces code redundancy.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow join-item border-base-300 border">
+          <input type="radio" name="my-accordion-4" />
+          <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+          <div class="collapse-content">
+            <p>There are various ways to  manipulate an element's attributes and styles using the DOM. Some common attribute methods are setAttribute(),removeAttribute() etc.We can use style.propertyName,classList.add(),classList.remove() etc to style dom element. </p>
+          </div>
+        </div>
+      </div>
+ </section>
+</body>
+</html>
